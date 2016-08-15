@@ -3,7 +3,7 @@ TabView.tabViewDatas = {
 	datas: [{
 		userLocation: {
 
-			A: ['安徽','澳门','安庆'],
+			A: ['安徽', '澳门', '安庆'],
 			B: ['北京'],
 			C: ['重庆'],
 			F: ['福建'],

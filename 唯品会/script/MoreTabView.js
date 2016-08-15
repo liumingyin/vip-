@@ -19,6 +19,31 @@ MoreTabView.prototype.load = function(){
 	$('.more-modal').show().css({
 		
 		left:Left
+		
+	}).hover(function(){
+		
+		$(this).show()
+		
+	},function(){
+		
+		$(this).hide()
+		
+	})
+	
+	$('.more-modal li').hover(function(){
+		
+		$(this).find('p').animate({
+			top:0
+		},500)
+		
+	},function(){
+		
+		$(this).find('p').animate({
+			
+			top:'25%'
+			
+		},500)
+		
 	})
 }
 
@@ -28,3 +53,12 @@ MoreTabView.prototype.unload = function(){
 	
 	$('.more-modal').hide()
 }
+
+
+
+
+
+
+
+
+
