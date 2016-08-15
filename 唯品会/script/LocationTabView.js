@@ -22,11 +22,24 @@ LocationTabView.prototype.load = function(index){
 	var Left = locationDiv.getBoundingClientRect().left + 'px'
 	
 	var Top = locationDiv.getBoundingClientRect().bottom + 'px'
-	 
-	 if(this.$tab){
-	 	this.$tab.show()
-	 	return
-	 }
+	
+	//监听窗口
+	$(window).resize(function(){
+	 	
+	 	Left = locationDiv.getBoundingClientRect().left + 'px'
+	
+	    Top = locationDiv.getBoundingClientRect().bottom + 'px'
+	})
+	
+	if(this.$tab){
+		
+	    this.$tab.show().css({
+	    	left:Left,
+		    top:Top,
+	    })
+	    
+	    return
+	}
 	 
 	//创建locationTabView的界面
 	this.$tab = $('<div class="locationBox">').css({
